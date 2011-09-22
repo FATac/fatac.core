@@ -26,13 +26,15 @@ setup(name='fatac.core',
       install_requires=[
           'setuptools',
           # -*- Extra requirements: -*-
+          'plone.app.dexterity [grok]',
+          'plone.app.referenceablebehavior',
+          'plone.app.relationfield',
+          'plone.namedfile [blobs]',
+          'collective.pfg.dexterity',
       ],
       entry_points="""
       # -*- Entry points: -*-
-
       [z3c.autoinclude.plugin]
       target = plone
       """,
-      setup_requires=["PasteScript"],
-      paster_plugins=["ZopeSkel"],
       )
