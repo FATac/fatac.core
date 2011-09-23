@@ -26,6 +26,9 @@ setup(name='fatac.core',
       install_requires=[
           'setuptools',
           # -*- Extra requirements: -*-
+          'z3c.saconfig',
+          'deform',
+          'pas.plugin.sqlalchemy',
           'plone.app.dexterity [grok]',
           'plone.app.referenceablebehavior',
           'plone.app.relationfield',
