@@ -28,7 +28,7 @@ setup(name='fatac.core',
           # -*- Extra requirements: -*-
           'z3c.saconfig',
           'deform',
-          'pas.plugin.sqlalchemy',
+          'pas.plugins.sqlalchemy',
           'plone.app.dexterity [grok]',
           'plone.app.referenceablebehavior',
           'plone.app.relationfield',
