@@ -26,6 +26,9 @@ setup(name='fatac.core',
       install_requires=[
           'setuptools',
           # -*- Extra requirements: -*-
+          'fatac.theme',
+          'fatac.forms',
+          'fatac.content',
           'z3c.saconfig',
           'deform',
           'pas.plugins.sqlalchemy',

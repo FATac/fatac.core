@@ -1,4 +1,10 @@
 <?xml version="1.0"?>
 <metadata>
   <version>1000</version>
+  <dependencies>
+    <dependency>profile-fatac.theme:default</dependency>
+    <dependency>profile-forms.theme:default</dependency>
+    <dependency>profile-content.theme:default</dependency>
+    <dependency>profile-Products.LinguaPlone:LinguaPlone</dependency>
+  </dependencies>
 </metadata>
