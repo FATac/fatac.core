@@ -21,6 +21,5 @@ class FunctionalTest(unittest.TestCase):
 
     def test_create_ghost_container(self):
         browser = z2.Browser(self.layer["app"])
-
-        import ipdb;ipdb.set_trace()
         browser.open('%s/@@fatac_settings' % self.portal.absolute_url())
+        import ipdb;ipdb.set_trace()

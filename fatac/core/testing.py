@@ -18,9 +18,17 @@ class FATAC(PloneSandboxLayer):
     def setUpZope(self, app, configurationContext):
         # Load ZCML
         import fatac.core
+        import z3c.jbot
+
+        xmlconfig.file('configure.zcml',
+                       z3c.jbot,
+                       context=configurationContext)
+
         xmlconfig.file('configure.zcml',
                        fatac.core,
                        context=configurationContext)
+
+
 
     def setUpPloneSite(self, portal):
         # Install into Plone site using portal_setup
