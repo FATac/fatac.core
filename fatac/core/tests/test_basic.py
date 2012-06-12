@@ -54,3 +54,7 @@ class IntegrationTest(unittest.TestCase):
 
     def test_Groups_folder_created(self):
         self.assertTrue('Groups' in self.portal.objectIds())
+
+    def test_Reviewers_group_deleted(self):
+        gtool = getToolByName(self.portal, 'portal_groups')
+        self.assertFalse('Reviewers' in gtool.listGroupNames())
