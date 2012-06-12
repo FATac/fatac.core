@@ -1,5 +1,5 @@
 import unittest2 as unittest
-from fatac.core.testing import FATAC_FUNCTIONAL_TESTING
+from fatac.core.testing import FATAC_FUNCTIONAL_TESTING, FATAC_INTEGRATION_TESTING
 from AccessControl import Unauthorized
 from zope.component import getMultiAdapter
 from Products.CMFCore.utils import getToolByName
@@ -43,3 +43,14 @@ class FunctionalTest(unittest.TestCase):
         self.browser.getControl(name="form.buttons.save").click()
 
         self.assertTrue(self.portal.arts.id == 'arts')
+
+
+class IntegrationTest(unittest.TestCase):
+
+    layer = FATAC_INTEGRATION_TESTING
+
+    def setUp(self):
+        self.portal = self.layer['portal']
+
+    def test_Groups_folder_created(self):
+        self.assertTrue('Groups' in self.portal.objectIds())
