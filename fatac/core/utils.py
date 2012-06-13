@@ -1,5 +1,6 @@
 from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone.utils import _createObjectByType
+from zope.site.hooks import getSite
 
 
 def crearObjecte(context, id, type_name, title, description, exclude=True, constrains=None):
@@ -9,7 +10,7 @@ def crearObjecte(context, id, type_name, title, description, exclude=True, const
         _createObjectByType(type_name, context, id)
     #populem l'objecte
     created = context[id]
-    doWorkflowAction(created)
+    doWorkflowAction(context, created)
     created.setTitle(title)
     created.setDescription(description)
     created._at_creation_flag = False
@@ -26,12 +27,16 @@ def crearObjecte(context, id, type_name, title, description, exclude=True, const
     return created
 
 
-def doWorkflowAction(context):
-    pw = getToolByName(context, "portal_workflow")
-    object_workflow = pw.getWorkflowsFor(context)[0].id
-    object_status = pw.getStatusOf(object_workflow, context)
-    if object_status:
-        try:
-            pw.doActionFor(context, {'simple_publication_workflow': 'publish'}[object_workflow])
-        except:
-            pass
+def doWorkflowAction(portal, content):
+    # portal = getSite()
+    pw = getToolByName(portal, "portal_workflow")
+    try:
+        object_workflow = pw.getWorkflowsFor(content)[0].id
+        object_status = pw.getStatusOf(object_workflow, content)
+        if object_status:
+            try:
+                pw.doActionFor(content, {'simple_publication_workflow': 'publish'}[object_workflow])
+            except:
+                pass
+    except:
+        pass
