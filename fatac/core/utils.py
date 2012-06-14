@@ -1,6 +1,6 @@
 from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone.utils import _createObjectByType
-from zope.site.hooks import getSite
+#from zope.site.hooks import getSite
 
 
 def crearObjecte(context, id, type_name, title, description, exclude=True, constrains=None):
