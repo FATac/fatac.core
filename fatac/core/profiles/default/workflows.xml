@@ -4,7 +4,10 @@
  <object name="fatac_dummy_workflow" meta_type="Workflow"/>
  <bindings>
   <default>
-   <bound-workflow workflow_id="simple_publication_workflow"/>
+   <bound-workflow workflow_id="fatac_workflow"/>
   </default>
+  <type type_id="fatac.dummy">
+    <bound-workflow workflow_id="fatac_dummy_workflow"/>
+  </type>
  </bindings>
 </object>
