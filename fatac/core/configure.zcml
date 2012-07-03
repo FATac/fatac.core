@@ -22,6 +22,14 @@
     permission="cmf.SetOwnProperties"
     />
 
+  <browser:page
+    for="plone.app.layout.navigation.interfaces.INavigationRoot"
+    name="change-password"
+    class=".userdataschema.CustomizedPasswordAccountPanel"
+    layer="fatac.theme.browser.interfaces.IThemeSpecific"
+    permission="cmf.SetOwnPassword"
+    />
+
   <genericsetup:registerProfile
       name="default"
       title="fatac.core"
@@ -29,6 +37,5 @@
       description="Installs the fatac.core package"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
-  <!-- -*- extra stuff goes here -*- -->
 
 </configure>

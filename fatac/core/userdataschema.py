@@ -6,7 +6,8 @@ from fatac.theme import FatacThemeMessageFactory as FATACMF
 from plone.app.users.userdataschema import IUserDataSchemaProvider
 from plone.app.users.userdataschema import IUserDataSchema
 from plone.app.users.userdataschema import checkEmailAddress
-from plone.app.users.browser.personalpreferences import UserDataPanel
+from plone.app.users.browser.personalpreferences import UserDataPanel, PasswordAccountPanel
+from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
 
 def validateAccept(value):
@@ -79,6 +80,14 @@ class IEnhancedUserDataSchema(IUserDataSchema):
 
 
 class CustomizedUserDataPanel(UserDataPanel):
+
+    template = ViewPageTemplateFile('browser/profile_form.pt')
+
     def __init__(self, context, request):
         super(CustomizedUserDataPanel, self).__init__(context, request)
-        self.form_fields = self.form_fields.omit('location', 'portrait', 'pdelete', 'description')
+        self.form_fields = self.form_fields.omit('accept', 'location', 'portrait', 'pdelete', 'description')
+
+
+class CustomizedPasswordAccountPanel(PasswordAccountPanel):
+
+    template = ViewPageTemplateFile('browser/change_password_form.pt')
