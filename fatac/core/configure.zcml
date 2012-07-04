@@ -5,7 +5,7 @@
     xmlns:browser="http://namespaces.zope.org/browser"
     xmlns:monkey="http://namespaces.plone.org/monkey"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
-    i18n_domain="fatac.core">
+    i18n_domain="fatac.theme">
 
   <five:registerPackage package="." initialize=".initialize" />
 
