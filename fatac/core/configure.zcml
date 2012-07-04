@@ -2,8 +2,9 @@
     xmlns="http://namespaces.zope.org/zope"
     xmlns:five="http://namespaces.zope.org/five"
     xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:browser="http://namespaces.zope.org/browser"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
-    i18n_domain="fatac.core">
+    i18n_domain="fatac.theme">
 
   <five:registerPackage package="." initialize=".initialize" />
 
@@ -12,6 +13,23 @@
   <include package="fatac.content" />
   <include package="Products.LinguaPlone" />
 
+  <!-- Override default personal-information form -->
+  <browser:page
+    for="Products.CMFPlone.Portal.PloneSite"
+    name="personal-information"
+    class=".userdataschema.CustomizedUserDataPanel"
+    layer="fatac.theme.browser.interfaces.IThemeSpecific"
+    permission="cmf.SetOwnProperties"
+    />
+
+  <browser:page
+    for="plone.app.layout.navigation.interfaces.INavigationRoot"
+    name="change-password"
+    class=".userdataschema.CustomizedPasswordAccountPanel"
+    layer="fatac.theme.browser.interfaces.IThemeSpecific"
+    permission="cmf.SetOwnPassword"
+    />
+
   <genericsetup:registerProfile
       name="default"
       title="fatac.core"
@@ -19,6 +37,5 @@
       description="Installs the fatac.core package"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
-  <!-- -*- extra stuff goes here -*- -->
 
 </configure>
