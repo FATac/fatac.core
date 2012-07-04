@@ -4,7 +4,7 @@
     xmlns:i18n="http://namespaces.zope.org/i18n"
     xmlns:browser="http://namespaces.zope.org/browser"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
-    i18n_domain="fatac.core">
+    i18n_domain="fatac.theme">
 
   <five:registerPackage package="." initialize=".initialize" />
 
