@@ -29,7 +29,7 @@
                      i18n:domain="fatac.theme" i18n:translate="label_perfil_usuari">
                      Perfil d'usuari
                 </div>
-                <div class="georgia15c666666italic descripcio_registre" i18n:domain="fatac.theme" i18n:translate="label_iwant_register">
+                <div class="georgia15c666666italic descripcio_registre" i18n:domain="fatac.theme" i18n:translate="desc_iwant_register">
                     A través d'aquest formulari podeu canviar les dades del vostre perfil d'usuari.
                 </div>
                 <div metal:use-macro="context/base-pageform.html/form" />
