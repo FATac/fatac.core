@@ -36,7 +36,7 @@ class IEnhancedUserDataSchema(IUserDataSchema):
         required=True)
 
     email = schema.ASCIILine(
-        title=_(u'label_email', default=u'E-mail'),
+        title=_(u'email', default=u'E-mail'),
         description=u'',
         required=True,
         constraint=checkEmailAddress)
