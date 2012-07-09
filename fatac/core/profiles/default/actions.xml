@@ -53,6 +53,44 @@
    </property>
    <property name="visible">True</property>
   </object>
+
+  <object name="My Playlists" meta_type="CMF Action" i18n:domain="plone">
+   <property name="title" i18n:translate="">Les Meves Playlists</property>
+   <property name="description" i18n:translate=""></property>
+   <property name="url_expr">string:$portal_url/@@my-playlists</property>
+   <property name="icon_expr">string:++resource++fatac.theme.images/ico_ampliar.png</property>
+   <property name="available_expr"></property>
+   <property name="permissions">
+    <element value="fatac.AddPlaylist" />
+    <element value="Playlist: Add Playlist" />
+   </property>
+   <property name="visible">True</property>
+  </object>
+
+  <object name="Add File" meta_type="CMF Action" i18n:domain="plone">
+   <property name="title" i18n:translate="">Afegeix Fitxer</property>
+   <property name="description" i18n:translate=""></property>
+   <property name="url_expr">string:$portal_url/Members/${member/id}/createObject?type_name=File</property>
+   <property name="icon_expr">string:++resource++fatac.theme.images/ico_ampliar.png</property>
+   <property name="available_expr"></property>
+   <property name="permissions">
+    <element value="Add portal content"/>
+   </property>
+   <property name="visible">False</property>
+  </object>
+
+  <object name="My Groups" meta_type="CMF Action" i18n:domain="plone">
+   <property name="title" i18n:translate="">Els meus Grups</property>
+   <property name="description" i18n:translate=""></property>
+   <property name="url_expr">string:$portal_url/@@manage-groups</property>
+   <property name="icon_expr">string:++resource++fatac.theme.images/ico_ampliar.png</property>
+   <property name="available_expr"></property>
+   <property name="permissions">
+    <element value="Add Groups"/>
+   </property>
+   <property name="visible">True</property>
+  </object>
+
   <object name="fatac_admin" meta_type="CMF Action" i18n:domain="plone">
    <property name="title" i18n:translate="">Administracio</property>
    <property name="description" i18n:translate=""></property>
