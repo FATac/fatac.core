@@ -38,20 +38,7 @@
    <property name="permissions">
     <element value="Portlets: Manage own portlets"/>
    </property>
-   <property name="visible">True</property>
-  </object>
-  <object name="preferences" meta_type="CMF Action" i18n:domain="plone">
-   <property name="title" i18n:translate="">Preferences</property>
-   <property name="description" i18n:translate=""></property>
-   <property
-      name="url_expr">string:${globals_view/navigationRootUrl}/@@personal-information</property>
-   <property name="link_target"></property>
-   <property name="icon_expr"></property>
-   <property name="available_expr">python:member is not None</property>
-   <property name="permissions">
-    <element value="View"/>
-   </property>
-   <property name="visible">True</property>
+   <property name="visible">False</property>
   </object>
 
   <object name="My Playlists" meta_type="CMF Action" i18n:domain="plone">
@@ -87,6 +74,20 @@
    <property name="available_expr"></property>
    <property name="permissions">
     <element value="Add Groups"/>
+   </property>
+   <property name="visible">True</property>
+  </object>
+
+  <object name="preferences" meta_type="CMF Action" i18n:domain="plone">
+   <property name="title" i18n:translate="">Preferences</property>
+   <property name="description" i18n:translate=""></property>
+   <property
+      name="url_expr">string:${globals_view/navigationRootUrl}/@@personal-information</property>
+   <property name="link_target"></property>
+   <property name="icon_expr"></property>
+   <property name="available_expr">python:member is not None</property>
+   <property name="permissions">
+    <element value="View"/>
    </property>
    <property name="visible">True</property>
   </object>
