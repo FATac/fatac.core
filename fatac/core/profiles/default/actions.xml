@@ -8,6 +8,8 @@
  <object name="user" meta_type="CMF Action Category">
   <property name="title"></property>
 
+  <object name="Add Playlist" remove="True" />
+  <object name="Add Group" remove="True" />
   <object name="mystuff" remove="True" />
   <object name="dashboard" remove="True" />
   <object name="preferences" remove="True" />
