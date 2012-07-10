@@ -6,8 +6,16 @@
            <role name="Member" />
        </permission>
 
-       <permission name="Review portal content" acquire="True">
+       <permission name="Review portal content" acquire="False">
            <role name="Manager" />
+           <role name="Site Administrator" />
+           <role name="Owner" />
+       </permission>
+
+       <permission name="Review comments" acquire="False">
+           <role name="Manager" />
+           <role name="Member" />
+           <role name="Reviewer" />
            <role name="Site Administrator" />
            <role name="Owner" />
        </permission>
