@@ -30,13 +30,13 @@ class IEnhancedUserDataSchema(IUserDataSchema):
     extra fields.
     """
     fullname = schema.TextLine(
-        title=_(u'label_full_name', default=u'Full Name'),
-        description=_(u'help_full_name_creation',
+        title=FATACMF(u'label_full_name', default=u'Full Name'),
+        description=FATACMF(u'help_full_name_creation',
                       default=u"Enter full name, e.g. John Smith."),
         required=True)
 
     email = schema.ASCIILine(
-        title=_(u'email', default=u'E-mail'),
+        title=FATACMF(u'email', default=u'E-mail'),
         description=u'',
         required=True,
         constraint=checkEmailAddress)
@@ -63,8 +63,8 @@ class IEnhancedUserDataSchema(IUserDataSchema):
         )
 
     home_page = schema.TextLine(
-        title=_(u'label_homepage', default=u'Home page'),
-        description=_(u'help_homepage',
+        title=FATACMF(u'label_homepage', default=u'Home page'),
+        description=FATACMF(u'help_homepage',
                       default=u"The URL for your external home page, "
                       "if you have one."),
         required=False)
