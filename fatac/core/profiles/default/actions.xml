@@ -31,7 +31,7 @@
    <property name="visible">False</property>
   </object>
   <object name="dashboard" meta_type="CMF Action" i18n:domain="plone">
-   <property name="title" i18n:translate="">Dashboard</property>
+   <property name="title" i18n:translate="">Dashboard fatac</property>
    <property name="description" i18n:translate=""></property>
    <property name="url_expr">string:${portal_url}/dashboard</property>
    <property name="link_target"></property>
@@ -40,7 +40,7 @@
    <property name="permissions">
     <element value="Portlets: Manage own portlets"/>
    </property>
-   <property name="visible">False</property>
+   <property name="visible">True</property>
   </object>
 
   <object name="My Playlists" meta_type="CMF Action" i18n:domain="plone">
@@ -81,7 +81,7 @@
   </object>
 
   <object name="preferences" meta_type="CMF Action" i18n:domain="plone">
-   <property name="title" i18n:translate="">Preferences</property>
+   <property name="title" i18n:translate="">Profile</property>
    <property name="description" i18n:translate=""></property>
    <property
       name="url_expr">string:${globals_view/navigationRootUrl}/@@personal-information</property>
@@ -173,7 +173,7 @@
    <property name="visible">False</property>
   </object>
   <object name="logout" meta_type="CMF Action" i18n:domain="plone">
-   <property name="title" i18n:translate="">Log out</property>
+   <property name="title" i18n:translate="">Tancar sessió</property>
    <property name="description" i18n:translate=""></property>
    <property
       name="url_expr">string:${globals_view/navigationRootUrl}/logout</property>
