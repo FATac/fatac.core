@@ -38,7 +38,8 @@ setup(name='fatac.core',
           'plone.app.relationfield',
           'plone.namedfile [blobs]',
           'collective.pfg.dexterity',
-          'z3c.jbot'
+          'z3c.jbot',
+          'requests'
       ],
       entry_points="""
       # -*- Entry points: -*-
