@@ -7,6 +7,6 @@ old_enabled = ConversationView.enabled
 
 def enabled(self):
     parent = aq_inner(self.__parent__)
-    if parent.portal_type == 'fatac.dummy':
+    if parent.portal_type == 'fatac.dummy' or parent.portal_type == 'fatac.paginaLlibre':
         return True
     return old_enabled(self)

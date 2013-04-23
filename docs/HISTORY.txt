@@ -1,6 +1,11 @@
 Changelog
 =========
 
+1.1 (unreleased)
+-----------------
+
+- Afegit que al tipus fatac.paginaLlibre es puguin crear comentaris
+
 1.0dev (unreleased)
 -------------------
 
